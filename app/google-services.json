@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "633790882692",
+    "firebase_url": "https://semana-13-a4e09.firebaseio.com",
+    "project_id": "semana-13-a4e09",
+    "storage_bucket": "semana-13-a4e09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633790882692:android:9fe4865addd4076843f3d1",
+        "android_client_info": {
+          "package_name": "co.domi.semana13"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633790882692-b6gcskbud9im9ugdd1lh7tgh46ce49c4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmD0WHcMGQs-QU-u8hO_JGgDlIGpOyZKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633790882692-b6gcskbud9im9ugdd1lh7tgh46ce49c4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
