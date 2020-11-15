@@ -1,11 +1,15 @@
 package co.domi.semana13;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.UUID;
@@ -54,6 +58,7 @@ public class UsuarioAdaptador extends BaseAdapter {
         Usuario usuario = usuarioData.get(pos);
 
         Button borrarBtn = renglonView.findViewById(R.id.borrarBtn);
+        Button callBtn = renglonView.findViewById(R.id.callBtn);
         TextView nombreIdView = renglonView.findViewById(R.id.nombreIdView);
         TextView telefonoIdView = renglonView.findViewById(R.id.telefonoIdView);
 
@@ -62,12 +67,26 @@ public class UsuarioAdaptador extends BaseAdapter {
 
         borrarBtn.setOnClickListener(
                 (v) -> {
-                   //String id = usuarioData.getId();
-                   //DatabaseReference
+                  // String id = usuarioData.getId();
+                  // String username = getIntent().getExtras().getString("username");
+                  // DatabaseReference reference = FirebaseDatabase.getInstance().child("Usuario").child(username).child(id);
                 }
         );
 
-        
+        telefonoIdView.setOnClickListener(
+                (v) -> {
+                    //String tel = usuarioData.getTelefono();
+                   // Intent intent = new Intent(Intent.Action_CALL);
+                   // Intent.setData();
+                    //StartActivity(intent);
+                }
+        );
+
+
+
+
+
+
 
 
         return renglonView;
