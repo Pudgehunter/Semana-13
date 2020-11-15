@@ -1,6 +1,7 @@
 package co.domi.semana13;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,18 +68,19 @@ public class UsuarioAdaptador extends BaseAdapter {
 
         borrarBtn.setOnClickListener(
                 (v) -> {
-                  // String id = usuarioData.getId();
-                  // String username = getIntent().getExtras().getString("username");
-                  // DatabaseReference reference = FirebaseDatabase.getInstance().child("Usuario").child(username).child(id);
+                   String id = usuario.getId();
+                   String username = usuario.getNombreUsuario();
+                   DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Usuario").child(username).child(id);
+                   reference.setValue(null);
                 }
         );
 
         telefonoIdView.setOnClickListener(
                 (v) -> {
-                    //String tel = usuarioData.getTelefono();
-                   // Intent intent = new Intent(Intent.Action_CALL);
-                   // Intent.setData();
-                    //StartActivity(intent);
+                    float tel = usuario.getTelefono();
+                    Intent intent = new Intent(Intent.ACTION_CALL);
+                    intent.setData(Uri.parse(String.valueOf(tel)));
+                    lista.getContext().startActivity(intent);
                 }
         );
 
